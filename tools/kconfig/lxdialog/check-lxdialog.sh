@@ -45,7 +45,7 @@ ccflags()
 	else
 		echo '-DCURSES_LOC="<curses.h>"'
 	fi
-	if [ $(uname -s) == "Darwin" ]; then
+	if [ $(uname -s) == "Darwin" -o $(uname -s) == "FreeBSD" ]; then
 		#OSX doesn't have libintl
 		echo -n "-DKBUILD_NO_NLS -Wno-format-security "
 	elif [ $(uname -s) == "FreeBSD" ]; then

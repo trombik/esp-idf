@@ -43,6 +43,10 @@ endif
 endif # MING32
 endif # MSYSTEM
 
+ifeq ($(shell uname -s),FreeBSD)
+CONFIG_SHELL := /usr/local/bin/bash
+endif
+
 default: mconf-idf conf-idf
 
 xconfig: qconf
