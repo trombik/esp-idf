@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Check ncurses compatibility
 
 if [ "$OSTYPE" != "msys" ]; then
